@@ -1,0 +1,27 @@
+1. git commit --amend -m "..."
+
+-Komenda ta pozwala na modyfikacjê ostatniego commita, który ju¿ zosta³ zapisany w historii. Mo¿esz zmieniæ wiadomoœæ tego commita, a tak¿e dodaæ do niego dodatkowe zmiany, jeœli wprowadzi³eœ je w roboczym katalogu i doda³eœ je do obszaru staging (git add).
+
+2. git commit --amend --no-edit
+
+-Komenda ta równie¿ modyfikuje ostatni commit, ale bez zmiany jego wiadomoœci. Jest to przydatne, gdy chcesz dodaæ nowe zmiany do ostatniego commita, ale nie chcesz zmieniaæ jego wiadomoœci.
+
+3. git rebase
+
+-Komenda git rebase zmienia historiê commitów, przenosz¹c je na inne miejsce w historii. Jest to sposób na w³¹czenie zmian z jednej ga³êzi do innej lub na zmianê bazy commitów, co umo¿liwia czyszczenie historii repozytorium (np. ³¹czenie commitów lub usuwanie zbêdnych).
+
+4. git reset --soft HEAD^
+
+-Komenda ta cofa ostatni commit, ale pozostawia zmiany w obszarze staging (tzn. zmiany s¹ gotowe do ponownego commitowania).
+
+5. git reset --mixed HEAD^
+
+-Ta komenda równie¿ cofa ostatni commit, ale przenosi zmiany z obszaru staging do roboczego katalogu, tzn. zmiany s¹ nadal obecne w Twoich plikach, ale musisz je dodaæ ponownie do staging, aby móc je zatwierdziæ w nowym commicie..
+
+6. git reset --hard HEAD^
+
+-Komenda ta usuwa zarówno ostatni commit, jak i zmiany w roboczym katalogu. Jest to sposób na ca³kowite cofniêcie siê o jeden commit, trac¹c wszystkie zmiany.
+
+7. git rebase -i HEAD~2 (a nastêpnie squash)
+
+-Komenda ta umo¿liwia interaktywne ³¹czenie commitów (tzw. squash) za pomoc¹ git rebase -i. Jest to u¿yteczne, gdy chcesz po³¹czyæ dwa lub wiêcej commitów w jeden, co upraszcza historiê.
